@@ -7,7 +7,16 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/hlk-kkk/config-repo.git # 配置git仓库的地址
+          uri: https://github.com/hlk-kkk/mainDemo.git # 配置git仓库的地址
           search-paths: config-repo                              # git仓库地址下的相对地址，可以配置多个，用,分割。
           username: 480587479@qq.com                               # git仓库的账号
           password: hjk19970913.
+eureka:
+  client:
+    registerWithEureka: false #是否将自己注册到Eureka Server上，默认为true
+    fetchRegistry: false #是否从Eureka Server上获取注册信息，默认为true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
