@@ -3,7 +3,7 @@ spring:
     config:
        name : spring-cloud-config
        profile : dev
-       uri : http://localhost:8769/
+       #uri : http://localhost:8769/
        label : master
        discovery:
          enabled : true
