@@ -1,0 +1,49 @@
+server:
+  # 服务端口号
+  port: 8765
+spring:
+  profiles: service-feign
+  application:
+    # 服务名，即serviceId
+    name: service-feign
+eureka:
+  instance:
+    hostname:  service-feign
+  client:
+    serviceUrl:
+      # 安全认证的服务注册中心地址
+      defaultZone: http://localhost:8888/eureka
+feign:
+  hystrix:
+    enabled: true
+# 熔断器DashBoard: actuator在boot2.0调整后开关web端点的配置，*代表开启所有
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+---
+server:
+  # 服务端口号
+  port: 8766
+spring:
+  profiles: service-feign2
+  application:
+    # 服务名，即serviceId
+    name: service-feign2
+eureka:
+  instance:
+    hostname: service-feign2
+  client:
+    serviceUrl:
+      # 安全认证的服务注册中心地址
+      defaultZone: http://localhost:8888/eureka
+feign:
+  hystrix:
+    enabled: true
+# 熔断器DashBoard: actuator在boot2.0调整后开关web端点的配置，*代表开启所有
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
