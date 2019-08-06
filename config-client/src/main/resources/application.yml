@@ -4,10 +4,10 @@ spring:
   application:
     name : spring-cloud-config-client
 
-eureka:
-  client:
-    registerWithEureka: false #是否将自己注册到Eureka Server上，默认为true
-    fetchRegistry: false #是否从Eureka Server上获取注册信息，默认为true
+#eureka:
+ # client:
+  #  registerWithEureka: false #是否将自己注册到Eureka Server上，默认为true
+   # fetchRegistry: false #是否从Eureka Server上获取注册信息，默认为true
 management:
   endpoints:
     web:
